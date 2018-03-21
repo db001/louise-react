@@ -1,0 +1,24 @@
+.titleContainer {
+  color: rgb(0, 29, 82);
+  text-align: center;
+  margin-top: 50%;
+}
+.titleContainer h1, .titleContainer p {
+  text-shadow: 1px 1px 3px rgb(212, 212, 212), -1px -1px 3px rgb(212, 212, 212);
+}
+.titleContainer h1 {
+  font-family: 'Playfair Display', serif;
+}
+.titleContainer p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+}
+.jumbotron {
+  height: 100vh;
+  background: url('https://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/mri/mri7.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
