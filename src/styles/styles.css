@@ -1,7 +1,49 @@
+.navbar {
+  margin-bottom: 0;
+  background: rgba(110, 182, 241, 0.5);
+  border-width: 0;
+  position: fixed;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default .navbar-toggle {
+  background-color: rgba(110, 182, 241, 0.5);
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: rgba(110, 182, 241, 0.5);
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle:focus {
+  background-color: rgba(110, 182, 241, 0.5);
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+.navbar-default .navbar-nav > li:hover {
+  background-color: white;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: rgb(110, 182, 241)
+}
+.jumbotron {
+  height: 100vh;
+  background: url('https://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/mri/mri7.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+}
 .titleContainer {
   color: rgb(0, 29, 82);
   text-align: center;
-  margin-top: 50%;
+  margin: auto;
 }
 .titleContainer h1, .titleContainer p {
   text-shadow: 1px 1px 3px rgb(212, 212, 212), -1px -1px 3px rgb(212, 212, 212);
@@ -13,12 +55,4 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5rem;
-}
-.jumbotron {
-  height: 100vh;
-  background: url('https://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/mri/mri7.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
