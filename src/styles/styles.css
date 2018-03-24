@@ -73,3 +73,13 @@ h1, h2 {
 .about p {
   text-align: justify;
 }
+.info {
+  background-color: rgb(193, 227, 255);
+  overflow: auto;
+}
+.info p {
+  padding: 0;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
