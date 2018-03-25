@@ -8,7 +8,7 @@ class About extends Component {
         <Grid>        
           <Row>
             <Col xs={12}>
-              <h2>About Louise</h2>
+              <h3>About Louise</h3>
             </Col>
           </Row>
           <Row>
@@ -35,6 +35,11 @@ class About extends Component {
               </Col>
               <Col xs={12} md={6}>
                 <p>Studied Foundation in Art &amp; Design, North Herts College 1995-1996</p>
+              </Col>
+              <Col xs={12}>
+                <p className="contact">Contact:
+                  <a href="mailto:louiselahive@hotmail.com?Subject=Website" target="_top"> louiselahive@hotmail.com</a>
+                </p>
               </Col>
             </div>
           </Row>
