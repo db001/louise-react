@@ -10,6 +10,7 @@ import './App.css';
 import './styles/styles.css';
 
 class App extends Component {
+
   render() {
     return (
       <div>
