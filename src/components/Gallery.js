@@ -4,7 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 const images = {
   mri: {
-    baseURL: "http://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/mri/",
+    folder: "mri/",
     jpgs: [
       'mri1.jpg',
       'mri2.jpg',
@@ -16,7 +16,7 @@ const images = {
     ],
   },
   swarm: {
-    baseURL: "http://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/swarm/",
+    folder: "swarm/",
     jpgs: [
       'swarm1.jpg',
       'swarm2.jpg',
@@ -30,7 +30,7 @@ const images = {
     ],
   },
   installation: {
-    baseURL: "http://res.cloudinary.com/dl9xyhypx/image/upload/v1519334193/mri/",
+    folder: "installation/",
     jpgs: [
       'installation1.jpg',
       'installation2.jpg',
@@ -39,7 +39,27 @@ const images = {
   }
 };
 
-const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_286,c_lpad,b_white/v1519334193/mri/`;
+let imageHeight = setImageHeight();
+
+function getWindowHeight() {
+  return Math.max(document.documentElement.clientWidth || 0);  
+}
+
+function setImageHeight() {
+  let windowWidth = getWindowHeight();
+  if(windowWidth < 692) {
+    imageHeight = 268;
+  } else if(windowWidth >= 692 && windowWidth < 992) {
+    imageHeight = 450;
+  } else if(windowWidth > 992) {
+    imageHeight = 600;
+  }
+  console.log(windowWidth, imageHeight);
+}
+
+window.addEventListener('resize', setImageHeight);
+
+const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${imageHeight},c_lpad,b_white/v1519334193/mri/`;
 
 
 class Gallery extends Component { 
@@ -59,7 +79,7 @@ class Gallery extends Component {
                 {
                   images.mri.jpgs.map(image =>
                     <Carousel.Item className="paintingCarousel" key={image}>
-                      <img alt="900x500" src={baseURL + image} />
+                      <img alt={image} src={baseURL + image} />
                       <Carousel.Caption>
                       <h3>{image}</h3>
                       {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
