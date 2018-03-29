@@ -59,7 +59,7 @@ function setImageHeight() {
 
 window.addEventListener('resize', setImageHeight);
 
-const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${imageHeight},c_lpad,b_white/v1519334193/mri/`;
+const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_286,c_lpad,b_white/v1519334193/mri/`;
 
 
 class Gallery extends Component { 

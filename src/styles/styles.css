@@ -14,6 +14,10 @@ h1, h2, h3 {
 .navbar-default .navbar-brand {
   color: white;
 }
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: rgb(110, 182, 241);
+  background: white;
+}
 .navbar-default .navbar-toggle {
   background-color: rgba(110, 182, 241, 0.5);
 }
@@ -23,16 +27,16 @@ h1, h2, h3 {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
-.navbar-default .navbar-toggle:focus {
-  background-color: rgba(110, 182, 241, 0.5);
-}
+  /* .navbar-default .navbar-toggle:focus {
+    background-color: rgba(110, 182, 241, 0.5);
+  }  */
 .navbar-default .navbar-nav > li > a {
   color: white;
 }
-.navbar-default .navbar-nav > li:hover {
+.navbar-default .navbar-nav > li:hover, .navbar-default .navbar-nav > li > a:focus {
   background-color: white;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: rgb(110, 182, 241)
 }
 .jumbotron {

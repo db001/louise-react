@@ -8,7 +8,9 @@ class NavigationBar extends Component {
       <Navbar collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            Louise Lahive
+            <a href="/">
+              Louise Lahive
+            </a>
           </Navbar.Brand>
           <Navbar.Toggle>
           </Navbar.Toggle>
