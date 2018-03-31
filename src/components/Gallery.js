@@ -36,35 +36,51 @@ const images = {
       'installation2.jpg',
       'installation3.jpg'
     ]
-  }
+  },
+  baseURL: 'http://res.cloudinary.com/dl9xyhypx/image/upload/',
+  heightModifier: 'h_286',
+  imageTransforms: ',c_lpad,b_white/',
+  userId: 'v1519334193/',
+  windowWidth: 0,
+  imageHeight: 0
 };
-
-let imageHeight = setImageHeight();
-
-function getWindowHeight() {
-  return Math.max(document.documentElement.clientWidth || 0);  
-}
-
-function setImageHeight() {
-  let windowWidth = getWindowHeight();
-  if(windowWidth < 692) {
-    imageHeight = 268;
-  } else if(windowWidth >= 692 && windowWidth < 992) {
-    imageHeight = 450;
-  } else if(windowWidth > 992) {
-    imageHeight = 600;
-  }
-  console.log(windowWidth, imageHeight);
-}
-
-window.addEventListener('resize', setImageHeight);
-
-const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${imageHeight},c_lpad,b_white/v1519334193/mri/`;
-
 
 class Gallery extends Component { 
 
+  constructor(props) {
+    super(props);
+    this.state = {...images};
+    this.getWindowWidth = this.getWindowWidth.bind(this);
+    this.setImageHeight = this.setImageHeight.bind(this);
+    
+  }
+
+  getWindowWidth() {
+    this.setState({windowWidth: Math.max(document.documentElement.clientWidth || 0)})
+  }
+
+  setImageHeight() {
+    this.getWindowWidth();
+    if(this.state.windowWidth < 692) {
+      this.setState({imageHeight: 268});
+    } else if(this.state.windowWidth >= 692 && this.state.windowWidth < 992) {
+      this.setState({imageHeight: 450});
+    } else if(this.state.windowWidth > 992) {
+      this.setState({imageHeight: 600});
+    }
+    console.log(this.state.windowWidth, this.state.imageHeight);
+  }
+
+  componentDidMount() {
+    // this.getWindowWidth();
+    this.setImageHeight();
+    window.addEventListener('resize', this.setImageHeight.bind(this));
+  }
+
   render() {
+    const imgs = this.state;
+    const imagesURL = `${imgs.baseURL}h_${imgs.imageHeight}${imgs.imageTransforms}${imgs.mri.folder}`;
+
     return (
       <div className="gallery">
         <Grid>
@@ -77,9 +93,9 @@ class Gallery extends Component {
             <Col xs={12}>
               <Carousel>
                 {
-                  images.mri.jpgs.map(image =>
+                  imgs.mri.jpgs.map(image =>
                     <Carousel.Item className="paintingCarousel" key={image}>
-                      <img alt={image} src={baseURL + image} />
+                      <img alt={image} src={imagesURL + image} />
                       <Carousel.Caption>
                       <h3>{image}</h3>
                       {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
