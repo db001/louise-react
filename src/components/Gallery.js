@@ -58,7 +58,6 @@ class Gallery extends Component {
     this.setState({windowWidth: Math.max(document.documentElement.clientWidth || 0)})
   }
 
-<<<<<<< HEAD
   // Set height of the gallery images depending on window width
   setImageHeight() {
     this.getWindowWidth();
@@ -70,9 +69,6 @@ class Gallery extends Component {
       this.setState({imageHeight: 600});
     }
   }
-=======
-const baseURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_286,c_lpad,b_white/v1519334193/mri/`;
->>>>>>> 22f4516310a4068161ec0468c988d26a2036328a
 
   // Select images based on button click
   chooseImageSet(e) {
