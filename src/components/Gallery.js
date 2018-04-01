@@ -34,7 +34,10 @@ const images = {
       'installation2.jpg',
       'installation3.jpg'
     ]
-  },
+  }
+}
+
+const gallerySettings= {
   baseURL: 'http://res.cloudinary.com/dl9xyhypx/image/upload/',
   imageTransforms: ',c_lpad,b_white/',
   userId: 'v1519334193/',
@@ -47,10 +50,10 @@ class Gallery extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {...images};
+    this.state = {images, ...gallerySettings};
     this.getWindowWidth = this.getWindowWidth.bind(this);
     this.setImageHeight = this.setImageHeight.bind(this);
-    this.chooseImageSet = this.chooseImageSet.bind(this);
+    this.chooseImageSet = this.chooseImageSet.bind(this); 
   }
 
   // Get the width of the current window
@@ -62,7 +65,7 @@ class Gallery extends Component {
   setImageHeight() {
     this.getWindowWidth();
     if(this.state.windowWidth < 692) {
-      this.setState({imageHeight: 268});
+      this.setState({imageHeight: 275});
     } else if(this.state.windowWidth >= 692 && this.state.windowWidth < 992) {
       this.setState({imageHeight: 450});
     } else if(this.state.windowWidth > 992) {
@@ -77,14 +80,15 @@ class Gallery extends Component {
 
   // Call setImageHeight on component mount and add event listener for window resize
   componentDidMount() {
+    this.getWindowWidth();
     this.setImageHeight();
     window.addEventListener('resize', this.setImageHeight.bind(this));
   }
 
-  render() {
-    const imgs = this.state;
-    const galleryToShow = imgs.currentFolder;
-    const imagesURL = `${imgs.baseURL}h_${imgs.imageHeight}${imgs.imageTransforms}${imgs.currentFolder}/`;
+  render() { 
+    
+    const imagesURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${this.state.imageHeight},c_lpad,b_white/v1519334193/${this.state.currentFolder}/`;
+    const imageFolder = {...this.state.images[this.state.currentFolder]};
 
     return (
       <div className="gallery">
@@ -98,11 +102,11 @@ class Gallery extends Component {
             <Col xs={12}>
               <Carousel>
                 {
-                  imgs.mri.jpgs.map(image =>
+                  imageFolder.jpgs.map(image =>
                     <Carousel.Item className="paintingCarousel" key={image}>
                       <img alt={image} src={imagesURL + image} />
                       <Carousel.Caption>
-                      <h3>{image}</h3>
+                        <h3>{image}</h3>
                       </Carousel.Caption>
                     </Carousel.Item>
                   )
@@ -115,7 +119,7 @@ class Gallery extends Component {
               <ButtonGroup bsSize="large">
                 <Button data-id="mri" onClick={this.chooseImageSet}>MRI</Button>
                 <Button data-id="swarm" onClick={this.chooseImageSet}>Swarm</Button>
-                <Button data-id="install" onClick={this.chooseImageSet}>Installation</Button>
+                <Button data-id="installation" onClick={this.chooseImageSet}>Installation</Button>
               </ButtonGroup>
             </Col>
           </Row>
