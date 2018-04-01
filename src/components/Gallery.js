@@ -87,7 +87,7 @@ class Gallery extends Component {
 
   render() { 
     
-    const imagesURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${this.state.imageHeight},c_lpad,b_white/v1519334193/${this.state.currentFolder}/`;
+    const imagesURL = `http://res.cloudinary.com/dl9xyhypx/image/upload/h_${this.state.imageHeight},c_lpad,c_lfill,b_white/v1519334193/${this.state.currentFolder}/`;
     const imageFolder = {...this.state.images[this.state.currentFolder]};
 
     return (
