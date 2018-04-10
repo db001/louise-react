@@ -5,6 +5,8 @@ function fadeInNav() {
 
   if(fadeInPoint < 0) {
     navbar.style.background = `rgba(110, 182, 241, ${Math.abs(fadeInPoint / 100)})`;
+  } else {
+    navbar.style.background = `rgba(110, 182, 241, 0.0)`;    
   }
 }
 
