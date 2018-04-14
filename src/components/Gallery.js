@@ -108,9 +108,9 @@ class Gallery extends Component {
                   imageFolder.jpgs.map(image =>
                     <Carousel.Item className="paintingCarousel" key={image}>
                       <img alt={image} src={imagesURL + image} />
-                      <Carousel.Caption>
+                      {/* <Carousel.Caption>
                         <h3>{image}</h3>
-                      </Carousel.Caption>
+                      </Carousel.Caption> */}
                     </Carousel.Item>
                   )
                 }

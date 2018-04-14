@@ -124,12 +124,21 @@ hr.componentSeperator {
 }
 .carousel {
   max-height: 275px;
+  min-height: 275px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 .paintingCarousel img {
   height: 100%;
   width: auto;
   margin: auto;
+}
+.carousel-indicators li {
+  box-shadow: 1px 1px 1px rgb(47, 47, 47)
+}
+.carousel-indicators .active {
+  background-color: rgb(193, 227, 255)
 }
 .btn-group {
   font-family: 'Montserrat', sans-serif;  
@@ -150,6 +159,7 @@ hr.componentSeperator {
 @media (min-width: 692px) {
   .carousel {
     max-height: 450px;
+    min-height: 450px;
     overflow: hidden;
   }
 }
@@ -164,6 +174,7 @@ hr.componentSeperator {
   }
   .carousel {
     max-height: 600px;
+    min-height: 600px;
     overflow: hidden;
   }
 }
