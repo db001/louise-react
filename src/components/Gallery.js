@@ -84,6 +84,7 @@ class Gallery extends Component {
     this.getWindowWidth();
     this.setImageHeight();
     window.addEventListener('resize', this.setImageHeight.bind(this));
+    window.addEventListener('load', this.setImageHeight.bind(this));  
   }
 
   render() { 
