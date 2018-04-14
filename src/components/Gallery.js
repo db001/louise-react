@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Grid, Row, Col, ButtonGroup, Button } from 'react-bootstrap';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 // Hardcoded state
 const images = {
@@ -92,6 +93,7 @@ class Gallery extends Component {
 
     return (
       <div className="gallery">
+        <ScrollableAnchor id={'gallery'}>
         <Grid>
           <Row>
             <Col xs={12}>
@@ -124,6 +126,7 @@ class Gallery extends Component {
             </Col>
           </Row>
         </Grid>
+        </ScrollableAnchor>
       </div>
     )
   }

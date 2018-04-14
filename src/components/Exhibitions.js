@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 class Exhibitions extends Component {
   render() {
     return (
       <div className="exhibitions">
+        <ScrollableAnchor id={'exhibitions'}>
         <Grid>
           <Row>
             <Col xs={12}>
@@ -56,6 +58,7 @@ class Exhibitions extends Component {
             </Row>
           </div>
         </Grid>
+        </ScrollableAnchor>
       </div>
     )
   }

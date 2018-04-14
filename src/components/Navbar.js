@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class NavigationBar extends Component {
   render() {
@@ -8,8 +7,8 @@ class NavigationBar extends Component {
       <Navbar collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="/">
-              Louise Lahive
+            <a href="#home">
+              Louise Lahive          
             </a>
           </Navbar.Brand>
           <Navbar.Toggle>
@@ -17,13 +16,13 @@ class NavigationBar extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1}>
+            <NavItem eventKey={1} href="#about">
               About
             </NavItem>
-            <NavItem eventKey={2}>
+            <NavItem eventKey={2} href="#gallery">
               Gallery
             </NavItem>
-            <NavItem eventKey={3}>
+            <NavItem eventKey={3} href="#exhibitions">
               Exhibitions
             </NavItem>
           </Nav>

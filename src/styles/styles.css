@@ -17,6 +17,7 @@ h1, h2, h3 {
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: rgb(110, 182, 241);
   background: white;
+  cursor: pointer;
 }
 .navbar-default .navbar-toggle {
   background-color: rgba(110, 182, 241, 0.5);
@@ -27,9 +28,6 @@ h1, h2, h3 {
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
-  /* .navbar-default .navbar-toggle:focus {
-    background-color: rgba(110, 182, 241, 0.5);
-  }  */
 .navbar-default .navbar-nav > li > a {
   color: white;
 }
