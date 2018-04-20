@@ -24,27 +24,6 @@ class About extends Component {
               <p>There is an attempt to engage with what we do not, or cannot grasp. The landscape that swarms with (what could be) bacteria suggests an ominous movement of nature, and the man made mound suggests something hidden from view. The fractured MRIs that present us with an intimate view of the artist’s body, we cannot necessarily recognise, yet we know they are displaying what is hidden beneath the skin with intricate beauty. The trees appearing from the night resembling partially lit lungs, these are all suggesting a greater and slower knowledge that we might glimpse in the corner of our eye, yet evades our scrutiny.</p>
             </Col>
           </Row>
-          <Row className="container">
-            <div className="info">
-              <Col xs={12} md={6}>
-                <p>Works and lives in North Hertfordshire</p>
-              </Col>
-              <Col xs={12} md={6}>
-                <p>Fellow with Digswell Arts 2012 to 2017</p>
-              </Col>
-              <Col xs={12} md={6}>
-                <p>Studied BA in Fine Art Painting, Kingston University 1996-1999</p>
-              </Col>
-              <Col xs={12} md={6}>
-                <p>Studied Foundation in Art &amp; Design, North Herts College 1995-1996</p>
-              </Col>
-              <Col xs={12}>
-                <p className="contact">Contact:
-                  <a href="mailto:louiselahive@hotmail.com?Subject=Website" target="_top"> louiselahive@hotmail.com</a>
-                </p>
-              </Col>
-            </div>
-          </Row>
         </Grid> 
         </ScrollableAnchor>
       </div>   
