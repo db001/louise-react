@@ -100,6 +100,9 @@ hr.componentSeperator {
 .exhibitions {
   margin-bottom: 2em;
 }
+.exhibitions img {
+  display: none;
+}
 .exhibitions .exhibit p {
   margin: 0;
   padding: 0;
@@ -162,6 +165,12 @@ hr.componentSeperator {
     max-height: 450px;
     min-height: 450px;
     overflow: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .exhibitions img {
+    display: block;
+    width: 100%;
   }
 }
 
