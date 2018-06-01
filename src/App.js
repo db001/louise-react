@@ -7,7 +7,6 @@ import Exhibitions from './components/Exhibitions';
 import Education from './components/Education';
 import Footer from './components/Footer';
 
-import './App.css';
 import './styles/styles.css';
 
 class App extends Component {
