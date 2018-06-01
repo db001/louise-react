@@ -49,7 +49,7 @@ class Exhibitions extends Component {
                 <hr className="exhibitSeperator" />
                 <div className="exhibit">
                   <p className="exhibitDate">2014</p>
-                  <p className="exhibitTitle">‘The Longest Day'</p>
+                  <p className="exhibitTitle">'The Longest Day'</p>
                   <p>Group Exhibition</p>
                 </div>
               </Col>
